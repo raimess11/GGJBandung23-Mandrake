@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-31-13-516.png" type="Texture" id=1]
+[ext_resource path="res://ui/main menu/rsz_1picsart_22-10-23_07-29-44-398.png" type="Texture" id=2]
+[ext_resource path="res://ui/main menu/rsz_credit.png" type="Texture" id=3]
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-30-12-768.png" type="Texture" id=4]
+[ext_resource path="res://ui/main menu/rsz_exit.png" type="Texture" id=5]
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-28-36-066.png" type="Texture" id=6]
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-29-44-398.png" type="Texture" id=7]
+[ext_resource path="res://ui/main menu/rsz_start.png" type="Texture" id=8]
+[ext_resource path="res://ui/Enchanted Land DS D.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://ui/main menu/rsz_1picsart_22-10-23_07-30-33-448.png" type="Texture" id=10]
+[ext_resource path="res://ui/Menu.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 9 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.121569, 0.121569, 0.121569, 1 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -512.0
+margin_top = 54.0
+margin_right = 512.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 1 )
+text = "Mandrake"
+align = 1
+
+[node name="subTitle" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -512.0
+margin_top = 71.0
+margin_right = 512.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 2 )
+text = "store and root garden"
+align = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -123.5
+margin_top = 59.0
+margin_right = 123.5
+margin_bottom = 59.0
+alignment = 1
+
+[node name="Start" type="TextureButton" parent="HBoxContainer"]
+margin_top = 171.0
+margin_right = 247.0
+margin_bottom = 254.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 2 )
+
+[node name="Credit" type="TextureButton" parent="HBoxContainer"]
+margin_top = 258.0
+margin_right = 247.0
+margin_bottom = 341.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 4 )
+
+[node name="Exit" type="TextureButton" parent="HBoxContainer"]
+margin_top = 345.0
+margin_right = 247.0
+margin_bottom = 428.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+
+[connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="HBoxContainer/Credit" to="." method="_on_Credit_pressed"]
+[connection signal="pressed" from="HBoxContainer/Exit" to="." method="_on_Exit_pressed"]
