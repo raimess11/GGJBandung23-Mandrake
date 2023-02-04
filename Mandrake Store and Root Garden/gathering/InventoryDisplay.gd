@@ -13,7 +13,7 @@ func update_inventory_display():
 func update_inventory_display_slot_display(roots_index):
 	var inventorySlotDisplay = get_child(roots_index)
 	var roots = inventory.rootsesInInventory[roots_index]
-	inventorySlotDisplay.display_item(roots)
+	inventorySlotDisplay.display_roots(roots)
 	
 func _on_inventory_changes(indexes):
 	for roots_index in indexes:
