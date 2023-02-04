@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource path="res://gathering/Roots.gd" type="Script" id=1]
+[ext_resource path="res://roots/Roots.gd" type="Script" id=1]
 [ext_resource path="res://assets/kaca.png" type="Texture" id=2]
 
 [resource]
@@ -9,4 +9,4 @@ name = "Ríza Dilitiríou"
 texture = ExtResource( 2 )
 description = ""
 mytical = false
-quantity = 0
+quantity = 1
