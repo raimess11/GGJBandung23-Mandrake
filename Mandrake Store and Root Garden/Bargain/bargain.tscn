@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Bargain/black-and-white-border-box-frame-M08B21.jpg" type="Texture" id=1]
+[ext_resource path="res://Bargain/Enchanted Land DS D.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/Enchanted Land DS D.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Bargain/bargain.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="BargainTabs" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="NinePatchRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -681.0
+margin_top = -206.0
+margin_right = -96.0
+margin_bottom = 110.0
+texture = ExtResource( 1 )
+patch_margin_left = 143
+patch_margin_top = 141
+patch_margin_right = 143
+patch_margin_bottom = 142
+
+[node name="Title" type="Label" parent="TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -62.5
+margin_top = 8.0
+margin_right = 62.5
+margin_bottom = 70.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "bargain"
+
+[node name="Slider" type="HSlider" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -228.5
+margin_top = -8.0
+margin_right = 227.5
+margin_bottom = 8.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.5
+margin_top = -120.0
+margin_right = -75.5
+margin_bottom = -58.0
+grow_horizontal = 0
+
+[node name="Amount" type="Label" parent="TextureRect/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 62.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+
+[node name="Cents" type="Label" parent="TextureRect/HBoxContainer"]
+margin_left = 28.0
+margin_right = 61.0
+margin_bottom = 62.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "C"
+
+[node name="Deal" type="Button" parent="TextureRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.0
+margin_top = -126.0
+margin_right = -65.0
+margin_bottom = -58.0
+custom_fonts/font = SubResource( 3 )
+text = "Deal"
+
+[connection signal="value_changed" from="TextureRect/Slider" to="." method="_on_Slider_value_changed"]
+[connection signal="pressed" from="TextureRect/Deal" to="." method="_on_Deal_pressed"]
