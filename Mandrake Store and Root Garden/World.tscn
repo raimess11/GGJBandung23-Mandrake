@@ -1,3 +1,24 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Commponent/Item2D/Item2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Commponent/DropPoint/DropPoint.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
+
+[node name="Item" parent="." instance=ExtResource( 1 )]
+position = Vector2( 137, 278 )
+
+[node name="Item2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 595, 191 )
+
+[node name="DragNDropPoint" parent="." instance=ExtResource( 2 )]
+position = Vector2( 597, 454 )
+
+[node name="DragNDropPoint2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 595, 189 )
+
+[node name="DragNDropPoint4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 253, 433 )
+
+[node name="DragNDropPoint3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 134, 279 )

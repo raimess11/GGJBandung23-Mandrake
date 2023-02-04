@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Item",
 "language": "GDScript",
 "path": "res://roots/Roots.gd"
-}, {
-"base": "Resource",
-"class": "Slots",
-"language": "GDScript",
-"path": "res://Inventory/Slot.gd"
 } ]
 _global_script_class_icons={
-"Item": "",
-"Slots": ""
+"Item": ""
 }
 
 [application]
