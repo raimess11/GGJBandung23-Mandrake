@@ -10,18 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
-"class": "Inventory",
-"language": "GDScript",
-"path": "res://gathering/Inventory.gd"
-}, {
-"base": "Resource",
-"class": "Roots",
+"class": "Item",
 "language": "GDScript",
 "path": "res://gathering/Roots.gd"
+}, {
+"base": "Resource",
+"class": "Slot",
+"language": "GDScript",
+"path": "res://gathering/Slot.gd"
 } ]
 _global_script_class_icons={
-"Inventory": "",
-"Roots": ""
+"Item": "",
+"Slot": ""
 }
 
 [application]
