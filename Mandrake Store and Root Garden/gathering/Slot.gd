@@ -1,5 +1,5 @@
 extends Resource
-class_name Inventory
+class_name Slot
 
 signal inventoryChanged(indexes)
 
