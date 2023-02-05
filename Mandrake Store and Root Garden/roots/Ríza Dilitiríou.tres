@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Resource
+
+export(String) var name = \"\"
+export(Texture) var texture
+export(String) var description = \"\"
+"
+
+[resource]
+script = SubResource( 1 )
+name = ""
+texture = ExtResource( 1 )
+description = ""
