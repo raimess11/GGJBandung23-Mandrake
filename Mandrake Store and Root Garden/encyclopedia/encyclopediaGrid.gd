@@ -19,3 +19,7 @@ func LoadEncyclopedia():
 			instanceSlot.founded = item["Founded"]
 		self.add_child(instanceSlot)
 
+
+
+func _on_Button_button_up():
+	get_tree().change_scene("res://ui/ruang utama/RuangUtama.tscn")

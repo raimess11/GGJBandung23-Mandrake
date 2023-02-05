@@ -16,5 +16,6 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+z_index = 2
 
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
