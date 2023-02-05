@@ -18,6 +18,7 @@ func _ready():
 	$Sprite.scale.y = size
 	DropPoint_list = get_tree().get_nodes_in_group("DropPoint")
 	DropPoint = global_position
+	get_closed_dropPoint()
 
 
 func _physics_process(delta):

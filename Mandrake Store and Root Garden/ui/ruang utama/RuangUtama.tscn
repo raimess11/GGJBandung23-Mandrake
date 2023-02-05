@@ -13,6 +13,7 @@
 extents = Vector2( 113.5, 74.25 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 0, -2 )
 script = ExtResource( 6 )
 
 [node name="Storage" parent="." instance=ExtResource( 8 )]
