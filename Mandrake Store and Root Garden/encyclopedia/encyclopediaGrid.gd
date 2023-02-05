@@ -16,5 +16,6 @@ func LoadEncyclopedia():
 		if item["Founded"]:
 			instanceSlot.nameRoots = item["Name"]
 			instanceSlot.textureURL = item["TextureURL"]
+			instanceSlot.founded = item["Founded"]
 		self.add_child(instanceSlot)
 
