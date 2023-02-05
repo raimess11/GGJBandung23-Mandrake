@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "collection",
 "language": "GDScript",
 "path": "res://encyclopedia/collection.gd"
+}, {
+"base": "Node2D",
+"class": "customer",
+"language": "GDScript",
+"path": "res://customer/Customer.gd"
 } ]
 _global_script_class_icons={
-"collection": ""
+"collection": "",
+"customer": ""
 }
 
 [application]
