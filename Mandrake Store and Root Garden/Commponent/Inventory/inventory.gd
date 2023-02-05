@@ -1,5 +1,7 @@
 extends Resource
 
+onready var itemTres = preload("res://Commponent/Inventory/item/item.tres")
+
 export(Array, Resource) var itemInInventory = []
 export(int) var maxInventory = 12
 
@@ -8,8 +10,9 @@ func item_sortbyname(item):
 		return ""
 	return item.name
 
-func _init():
+func init_inventory():
 	itemInInventory.resize(maxInventory)
+	itemInInventory.fill(itemTres)
 
 #menambah data
 func add_item(item):
