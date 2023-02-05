@@ -49,6 +49,9 @@ func _on_Button_pressed():
 export(Array, Resource) var roots
 
 func _on_go_pressed():
+	get_tree().paused = false
+	fadePause.visible = false
+	reminderUI.visible = false
 	for i in int(rand_range(3, 7)):
 		var newItem2d = item2d.instance()
 		newItem2d.data = roots[int(rand_range(0,2.99))]
