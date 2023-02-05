@@ -1,5 +1,4 @@
-extends Resource
-class_name Item
+extends Reference
 
 export(String) var name = ""
 export(Texture) var texture
