@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "customer",
+"language": "GDScript",
+"path": "res://customer/Customer.gd"
+} ]
+_global_script_class_icons={
+"customer": ""
+}
+
 [application]
 
 config/name="Mandrake Store and Root Garden"
