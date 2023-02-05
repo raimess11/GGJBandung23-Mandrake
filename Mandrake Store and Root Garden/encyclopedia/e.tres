@@ -1,0 +1,128 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://encyclopedia/collection.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+NPCDictionarys = [ {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Farmer",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Guard",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Witcher",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Wizzard",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Villager1",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Villager2",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Meeted": false,
+"Name": "Villager3",
+"TextureURL": ""
+} ]
+RootsDictionarys = [ {
+"Description": "",
+"Encounters": 0,
+"Founded": true,
+"Name": "Ríza tis Therapeías",
+"TextureURL": "res://assets/roots/Bottle-small-green.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": true,
+"Name": "Ríza tis Katastrofí",
+"TextureURL": "res://assets/roots/Bottle-small-orange.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": true,
+"Name": "Ríza tis Zotikótitas",
+"TextureURL": "res://assets/roots/Bottle-small-yellow.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza tou Orámatos",
+"TextureURL": "res://assets/roots/Bottle-small-black.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza tis Aoratótitas",
+"TextureURL": "res://assets/roots/Bottle-small-white.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza Dilitiríou",
+"TextureURL": "res://assets/roots/Bottle-small-purple.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza tou Stoicheíou",
+"TextureURL": "res://assets/roots/Bottle-small-rednblue.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza tis Týflosis",
+"TextureURL": "res://assets/roots/Bottle-small-grey.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Ríza tis Tilemetaforás",
+"TextureURL": "res://assets/roots/Bottle-small-green2.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Mandrake ",
+"TextureURL": "res://assets/roots/Mandrake-transparent.png"
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Garder fairy",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Slime",
+"TextureURL": ""
+}, {
+"Description": "",
+"Encounters": 0,
+"Founded": false,
+"Name": "Magical crystal",
+"TextureURL": ""
+} ]
