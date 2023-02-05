@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://customer/Customer.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+tradeDialouge = "Fellow citizen, i need"
+acceptDialouge = "I will wait"
+declineDialouge = "I see"
+thanksDialouge = "Thanks, your help will be greatly appreciated"
