@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/ruang utama/pintu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/ruang utama/ruang utama.jpg" type="Texture" id=2]
+[ext_resource path="res://ui/ruang utama/basket.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/ruang utama/encyclopedia.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513, 335 )
+scale = Vector2( 1.00327, 0.895294 )
+texture = ExtResource( 2 )
+
+[node name="pintuToko" parent="." instance=ExtResource( 1 )]
+position = Vector2( 110, 324 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="pintukamar" parent="." instance=ExtResource( 1 )]
+position = Vector2( 466, 255 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="basket" parent="." instance=ExtResource( 3 )]
+position = Vector2( 819, 413 )
+scale = Vector2( 5, 5 )
+
+[node name="encyclopedia" parent="." instance=ExtResource( 4 )]
+position = Vector2( 457, 471 )
