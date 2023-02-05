@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GatheringSpot/reminderUI.gd" type="Script" id=1]
 [ext_resource path="res://ui/ruang utama/Map2.jpg" type="Texture" id=2]
+[ext_resource path="res://Commponent/Item/Root/Poison/RootOfPoison.tres" type="Resource" id=3]
 [ext_resource path="res://assets/white.png" type="Texture" id=4]
 [ext_resource path="res://ui/black-and-white-border-box-frame-M08B21-removebg-preview (1).png" type="Texture" id=5]
+[ext_resource path="res://Commponent/Item/Root/Destruction/RootOfDestruction.tres" type="Resource" id=6]
+[ext_resource path="res://Commponent/Item/Root/Healing/RootOfHealing.tres" type="Resource" id=7]
 [ext_resource path="res://GatheringSpot/GatheringMap.gd" type="Script" id=8]
 
-[node name="GatheringMap" type="CanvasLayer"]
+[node name="GatheringMap" type="Node2D"]
 script = ExtResource( 8 )
+roots = [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ) ]
 
 [node name="Map2" type="Sprite" parent="."]
 position = Vector2( 510, 299.5 )
@@ -17,10 +21,10 @@ texture = ExtResource( 2 )
 [node name="swamp" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -215.0
-margin_top = 20.0
-margin_right = 116.0
-margin_bottom = 163.0
+margin_left = 299.0
+margin_top = 36.0
+margin_right = 630.0
+margin_bottom = 179.0
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 4 )
 expand = true
@@ -57,8 +61,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 36.0
 margin_top = 18.0
-margin_right = -36.0
-margin_bottom = -18.0
+margin_right = 985.0
+margin_bottom = 575.0
 texture = ExtResource( 5 )
 draw_center = false
 patch_margin_left = 62
@@ -149,4 +153,5 @@ flat = true
 [connection signal="pressed" from="forest" to="." method="_on_forest_pressed"]
 [connection signal="pressed" from="mountain" to="." method="_on_mountain_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="reminderUI/ColorRect/go" to="." method="_on_go_pressed"]
 [connection signal="pressed" from="reminderUI/ColorRect/wait" to="reminderUI" method="_on_wait_pressed"]

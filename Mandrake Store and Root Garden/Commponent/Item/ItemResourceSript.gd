@@ -1,4 +1,4 @@
-extends Node
+extends Resource
 
 export(String) var nama = ""
 export(Texture) var texture
