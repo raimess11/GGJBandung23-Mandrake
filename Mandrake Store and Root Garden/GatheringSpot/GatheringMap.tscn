@@ -74,6 +74,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.129412, 0.129412, 0.129412, 0.435294 )
 
+[node name="Button" type="Button" parent="."]
+margin_left = 962.0
+margin_top = 26.0
+margin_right = 982.0
+margin_bottom = 46.0
+text = "X"
+
 [node name="reminderUI" type="CanvasLayer" parent="."]
 pause_mode = 2
 visible = false
@@ -143,4 +150,7 @@ flat = true
 [connection signal="pressed" from="river" to="." method="_on_river_pressed"]
 [connection signal="pressed" from="forest" to="." method="_on_forest_pressed"]
 [connection signal="pressed" from="mountain" to="." method="_on_mountain_pressed"]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
 [connection signal="pressed" from="reminderUI/ColorRect/wait" to="reminderUI" method="_on_wait_pressed"]
