@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://GatheringSpot/reminderUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/photo-1589182373726-e4f658ab50f0.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/download (2).jpg" type="Texture" id=3]
+[ext_resource path="res://assets/white.png" type="Texture" id=4]
+[ext_resource path="res://ui/black-and-white-border-box-frame-M08B21-removebg-preview (1).png" type="Texture" id=5]
+[ext_resource path="res://assets/download.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/download (1).jpg" type="Texture" id=7]
+[ext_resource path="res://GatheringSpot/GatheringMap.gd" type="Script" id=8]
+
+[node name="GatheringMap" type="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="swamp" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -473.0
+margin_top = 20.0
+margin_right = 287.0
+margin_bottom = 268.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="river" type="TextureButton" parent="."]
+margin_left = 39.0
+margin_top = 208.0
+margin_right = 799.0
+margin_bottom = 376.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="forest" type="TextureButton" parent="."]
+margin_left = 39.0
+margin_top = 376.0
+margin_right = 752.0
+margin_bottom = 582.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="mountain" type="TextureButton" parent="."]
+margin_left = 752.0
+margin_top = 20.0
+margin_right = 988.0
+margin_bottom = 582.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 18.0
+margin_right = -36.0
+margin_bottom = -18.0
+texture = ExtResource( 5 )
+draw_center = false
+patch_margin_left = 62
+patch_margin_top = 63
+patch_margin_right = 62
+patch_margin_bottom = 63
+
+[node name="fadePause" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.129412, 0.129412, 0.129412, 0.435294 )
+
+[node name="reminderUI" type="CanvasLayer" parent="."]
+pause_mode = 2
+visible = false
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="reminderUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 144.0
+margin_bottom = 72.0
+color = Color( 0.32549, 0.32549, 0.32549, 1 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="reminderUI/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+draw_center = false
+patch_margin_left = 62
+patch_margin_top = 63
+patch_margin_right = 62
+patch_margin_bottom = 63
+
+[node name="title" type="Label" parent="reminderUI/ColorRect"]
+anchor_right = 1.0
+margin_left = 40.0
+margin_top = 14.0
+margin_right = -40.0
+margin_bottom = 28.0
+align = 1
+
+[node name="description" type="Label" parent="reminderUI/ColorRect"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 38.0
+margin_right = -20.0
+margin_bottom = 52.0
+align = 1
+autowrap = true
+
+[node name="go" type="Button" parent="reminderUI/ColorRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -42.0
+margin_right = 47.0
+margin_bottom = -22.0
+text = "go!"
+flat = true
+
+[node name="wait" type="Button" parent="reminderUI/ColorRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -42.0
+margin_right = -14.0
+margin_bottom = -22.0
+text = "wait..."
+flat = true
+
+[connection signal="pressed" from="swamp" to="." method="_on_swamp_pressed"]
+[connection signal="pressed" from="river" to="." method="_on_river_pressed"]
+[connection signal="pressed" from="forest" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="mountain" to="." method="_on_mountain_pressed"]
+[connection signal="pressed" from="reminderUI/ColorRect/wait" to="reminderUI" method="_on_wait_pressed"]
