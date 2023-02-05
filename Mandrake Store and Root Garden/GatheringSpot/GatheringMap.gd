@@ -41,6 +41,5 @@ func _on_mountain_pressed():
 	title.text = "mountain"
 	desc.text = "a 3 days journey with a 12n coins bargain"
 
-
 func _on_Button_pressed():
 	visible = false

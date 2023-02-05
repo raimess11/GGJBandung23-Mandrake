@@ -16,7 +16,7 @@ func _on_Credit_pressed():
 
 
 func _on_Start_pressed():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://ui/ruang utama/RuangUtama.tscn")
 
 
 func _on_Exit_pressed():

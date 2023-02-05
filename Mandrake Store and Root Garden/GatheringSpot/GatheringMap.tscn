@@ -150,5 +150,7 @@ flat = true
 [connection signal="pressed" from="river" to="." method="_on_river_pressed"]
 [connection signal="pressed" from="forest" to="." method="_on_forest_pressed"]
 [connection signal="pressed" from="mountain" to="." method="_on_mountain_pressed"]
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
 [connection signal="pressed" from="reminderUI/ColorRect/wait" to="reminderUI" method="_on_wait_pressed"]
