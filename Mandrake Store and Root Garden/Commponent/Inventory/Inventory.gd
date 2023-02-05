@@ -17,7 +17,3 @@ func _ready():
 			newDropPoint.global_position += Vector2(x - columns/2,y) * (32+spacing/10) * 2 
 			add_child(newDropPoint)
 	update()
-
-func _physics_process(delta):
-	if global_position.distance_to(target_position):
-		global_position = lerp(global_position,target_position,25*delta)

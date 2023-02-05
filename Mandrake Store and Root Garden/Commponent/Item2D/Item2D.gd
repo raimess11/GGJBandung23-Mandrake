@@ -49,7 +49,8 @@ func get_closed_dropPoint(plus:bool = false):
 			currentDropPoint = point
 			DropPoint = point.global_position
 			finalPoint = point.global_position
-	return finalPoint
+		return finalPoint
+	
 
 func initial_currentDropPoint():
 	var minimun:int = DropPoint_list[0].global_position.distance_to(global_position)

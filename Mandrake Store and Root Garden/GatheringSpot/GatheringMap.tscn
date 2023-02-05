@@ -9,7 +9,7 @@
 [ext_resource path="res://Commponent/Item/Root/Healing/RootOfHealing.tres" type="Resource" id=7]
 [ext_resource path="res://GatheringSpot/GatheringMap.gd" type="Script" id=8]
 
-[node name="GatheringMap" type="CanvasLayer"]
+[node name="GatheringMap" type="Node2D"]
 script = ExtResource( 8 )
 roots = [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ) ]
 
@@ -21,10 +21,10 @@ texture = ExtResource( 2 )
 [node name="swamp" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -215.0
-margin_top = 20.0
-margin_right = 116.0
-margin_bottom = 163.0
+margin_left = 299.0
+margin_top = 36.0
+margin_right = 630.0
+margin_bottom = 179.0
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 4 )
 expand = true
@@ -61,8 +61,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 36.0
 margin_top = 18.0
-margin_right = -36.0
-margin_bottom = -18.0
+margin_right = 985.0
+margin_bottom = 575.0
 texture = ExtResource( 5 )
 draw_center = false
 patch_margin_left = 62
