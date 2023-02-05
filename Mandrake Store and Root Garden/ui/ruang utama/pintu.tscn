@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
+visible = false
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 1 )
 

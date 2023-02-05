@@ -2,11 +2,11 @@
 
 [ext_resource path="res://GatheringSpot/reminderUI.gd" type="Script" id=1]
 [ext_resource path="res://ui/ruang utama/Map2.jpg" type="Texture" id=2]
-[ext_resource path="res://Commponent/Item/Root/Poison/RootOfPoison.tres" type="Resource" id=3]
+[ext_resource path="res://Commponent/Item/Root/RootOfPoison.tres" type="Resource" id=3]
 [ext_resource path="res://assets/white.png" type="Texture" id=4]
 [ext_resource path="res://ui/black-and-white-border-box-frame-M08B21-removebg-preview (1).png" type="Texture" id=5]
-[ext_resource path="res://Commponent/Item/Root/Destruction/RootOfDestruction.tres" type="Resource" id=6]
-[ext_resource path="res://Commponent/Item/Root/Healing/RootOfHealing.tres" type="Resource" id=7]
+[ext_resource path="res://Commponent/Item/Root/RootOfDestruction.tres" type="Resource" id=6]
+[ext_resource path="res://Commponent/Item/Root/RootOfHealing.tres" type="Resource" id=7]
 [ext_resource path="res://GatheringSpot/GatheringMap.gd" type="Script" id=8]
 
 [node name="GatheringMap" type="Node2D"]

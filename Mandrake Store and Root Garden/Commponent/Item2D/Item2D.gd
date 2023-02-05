@@ -2,6 +2,7 @@ extends Node2D
 
 export(Resource) var data = preload("res://roots/Ríza Dilitiríou.tres")
 
+var size:float = 1
 
 var DropPoint:Vector2
 var DropPoint_list:Array = []
@@ -13,8 +14,10 @@ var onDropPoint:bool = false
 
 func _ready():
 	$Sprite.texture = data.texture
+	$Sprite.scale.x = size
+	$Sprite.scale.y = size
 	DropPoint_list = get_tree().get_nodes_in_group("DropPoint")
-	initial_currentDropPoint()
+	DropPoint = global_position
 
 
 func _physics_process(delta):

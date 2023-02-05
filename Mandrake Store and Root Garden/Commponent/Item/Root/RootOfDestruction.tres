@@ -1,9 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Commponent/Item/ItemResourceSript.gd" type="Script" id=1]
+[ext_resource path="res://assets/Root Image/root-orange.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
 nama = "Ríza tis Katastrofí "
+texture = ExtResource( 2 )
 description = "Glowing orange root creeping from tree with extremely power stored inside"
 harga = 0
