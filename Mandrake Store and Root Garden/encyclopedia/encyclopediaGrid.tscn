@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://encyclopedia/encyclopediaGrid.gd" type="Script" id=1]
+
+[node name="GridContainer" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/vseparation = 4
+custom_constants/hseparation = 8
+columns = 5
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+text = "X"
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]

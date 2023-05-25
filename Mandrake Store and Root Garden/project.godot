@@ -8,14 +8,43 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "collection",
+"language": "GDScript",
+"path": "res://encyclopedia/collection.gd"
+}, {
+"base": "Node2D",
+"class": "customer",
+"language": "GDScript",
+"path": "res://customer/Customer.gd"
+} ]
+_global_script_class_icons={
+"collection": "",
+"customer": ""
+}
+
 [application]
 
 config/name="Mandrake Store and Root Garden"
 config/icon="res://icon.png"
 
+[autoload]
+
+E="*res://encyclopedia/e.tres"
+EncyclopediaGlobalVar="*res://encyclopedia/encyclopediaGlobalVar.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [physics]
 

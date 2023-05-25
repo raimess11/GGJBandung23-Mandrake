@@ -1,57 +1,54 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GatheringSpot/reminderUI.gd" type="Script" id=1]
-[ext_resource path="res://assets/photo-1589182373726-e4f658ab50f0.jpg" type="Texture" id=2]
-[ext_resource path="res://assets/download (2).jpg" type="Texture" id=3]
-[ext_resource path="res://assets/white.png" type="Texture" id=4]
+[ext_resource path="res://ui/ruang utama/Map2.jpg" type="Texture" id=2]
+[ext_resource path="res://Commponent/Item/Root/RootOfPoison.tres" type="Resource" id=3]
 [ext_resource path="res://ui/black-and-white-border-box-frame-M08B21-removebg-preview (1).png" type="Texture" id=5]
-[ext_resource path="res://assets/download.jpg" type="Texture" id=6]
-[ext_resource path="res://assets/download (1).jpg" type="Texture" id=7]
+[ext_resource path="res://Commponent/Item/Root/RootOfDestruction.tres" type="Resource" id=6]
+[ext_resource path="res://Commponent/Item/Root/RootOfHealing.tres" type="Resource" id=7]
 [ext_resource path="res://GatheringSpot/GatheringMap.gd" type="Script" id=8]
 
-[node name="GatheringMap" type="CanvasLayer"]
+[node name="GatheringMap" type="Node2D"]
 script = ExtResource( 8 )
+roots = [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ) ]
+
+[node name="Map2" type="Sprite" parent="."]
+position = Vector2( 510, 299.5 )
+scale = Vector2( 0.245833, 0.256019 )
+texture = ExtResource( 2 )
 
 [node name="swamp" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -473.0
-margin_top = 20.0
-margin_right = 287.0
-margin_bottom = 268.0
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_left = 299.0
+margin_top = 36.0
+margin_right = 630.0
+margin_bottom = 179.0
+texture_hover = ExtResource( 5 )
 expand = true
 
 [node name="river" type="TextureButton" parent="."]
-margin_left = 39.0
-margin_top = 208.0
-margin_right = 799.0
-margin_bottom = 376.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_left = 383.0
+margin_top = 199.0
+margin_right = 682.0
+margin_bottom = 294.0
+texture_hover = ExtResource( 5 )
 expand = true
 
 [node name="forest" type="TextureButton" parent="."]
-margin_left = 39.0
-margin_top = 376.0
-margin_right = 752.0
-margin_bottom = 582.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_left = 437.0
+margin_top = 318.0
+margin_right = 598.0
+margin_bottom = 485.0
+texture_hover = ExtResource( 5 )
 expand = true
 
 [node name="mountain" type="TextureButton" parent="."]
-margin_left = 752.0
-margin_top = 20.0
-margin_right = 988.0
-margin_bottom = 582.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_left = 686.0
+margin_top = 198.0
+margin_right = 918.0
+margin_bottom = 435.0
+texture_hover = ExtResource( 5 )
 expand = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -59,8 +56,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 36.0
 margin_top = 18.0
-margin_right = -36.0
-margin_bottom = -18.0
+margin_right = 985.0
+margin_bottom = 575.0
 texture = ExtResource( 5 )
 draw_center = false
 patch_margin_left = 62
@@ -73,6 +70,13 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.129412, 0.129412, 0.129412, 0.435294 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 962.0
+margin_top = 26.0
+margin_right = 982.0
+margin_bottom = 46.0
+text = "X"
 
 [node name="reminderUI" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -139,8 +143,14 @@ margin_bottom = -22.0
 text = "wait..."
 flat = true
 
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
 [connection signal="pressed" from="swamp" to="." method="_on_swamp_pressed"]
 [connection signal="pressed" from="river" to="." method="_on_river_pressed"]
 [connection signal="pressed" from="forest" to="." method="_on_forest_pressed"]
 [connection signal="pressed" from="mountain" to="." method="_on_mountain_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="reminderUI/ColorRect/go" to="." method="_on_go_pressed"]
 [connection signal="pressed" from="reminderUI/ColorRect/wait" to="reminderUI" method="_on_wait_pressed"]

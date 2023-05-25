@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://ui/Credits.gd" type="Script" id=1]
 [ext_resource path="res://ui/Enchanted Land DS D.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/main menu/rsz_exit.png" type="Texture" id=3]
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-31-13-516.png" type="Texture" id=4]
+[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-29-44-398.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -65,3 +68,18 @@ text = "Game Design
 Raimess11
 ARF"
 align = 1
+
+[node name="Exit" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -123.5
+margin_top = -134.0
+margin_right = 123.5
+margin_bottom = -51.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

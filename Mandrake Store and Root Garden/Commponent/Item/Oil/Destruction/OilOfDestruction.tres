@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://assets/roots/Bottle-small-orange.png" type="Texture" id=1]
+[ext_resource path="res://Commponent/Item/ItemResourceSript.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+nama = "Oil Of Destruction"
+texture = ExtResource( 1 )
+description = ""
+harga = 0

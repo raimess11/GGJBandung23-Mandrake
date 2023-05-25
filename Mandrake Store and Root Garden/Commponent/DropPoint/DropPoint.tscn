@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Commponent/DropPoint/DropPoint.gd" type="Script" id=1]
+
+[node name="DragNDropPoint" type="Node2D" groups=["DropPoint"]]
+script = ExtResource( 1 )
+radius = 32
